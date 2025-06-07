@@ -41,6 +41,8 @@ public class Testing : MonoBehaviour
             //pomeranje
             for (int j = 0; j < height; j++)
             {
+                prev = 0;
+                next = 0;
                 for (int i = 0; i < width; i++)
                 {
                     if (grid.gridArray[i,j] < 0)//fixati da proverava da li je sledece polje -1 i da ga prebaci ako nije zaledjeno
