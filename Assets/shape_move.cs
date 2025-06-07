@@ -39,7 +39,7 @@ public class shape_move : MonoBehaviour
         // Release mouse
         if (Input.GetMouseButtonUp(0) && dragging)
         {
-            if (transform.position.x > 0f && transform.position.x < 13f && transform.position.y > -1.25f && transform.position.y < 8.75f)
+            if (transform.position.x > 0f && transform.position.x < 18f && transform.position.y > -1.25f && transform.position.y < 8.75f)
             {
                 Destroy(this.gameObject);
                 exists = false;
@@ -48,7 +48,12 @@ public class shape_move : MonoBehaviour
                 int cy = (int)Mathf.Round((transform.position.y - 1.25f) / increment);
                 if (this.gameObject.tag == "Shape_L")
                 {
-                    con.freaze(cx, cy, cx + 1, cy, cx, cy + 1, cx, cy + 2);
+                    con.freaze(cx, 3 - cy, cx + 1, 3 - cy, cx, 2 - cy, cx, 1 - cy);
+
+                }
+                if (this.gameObject.tag == "Shape_sq")
+                {
+                    con.freaze(cx, 3-cy, cx + 1, 3-cy, cx, 2-cy , cx+1, 2-cy );
 
                 }
             }
@@ -61,7 +66,7 @@ public class shape_move : MonoBehaviour
             float closestx;
             float closesty;
             transform.position = mouseWorldPos + offset;
-            if (transform.position.x > 0f && transform.position.x < 13f && transform.position.y > -1.25f && transform.position.y < 8.75f)
+            if (transform.position.x > 0f && transform.position.x < 18f && transform.position.y > -1.25f && transform.position.y < 8.75f)
             {
                 closestx = Mathf.Round((transform.position.x - 1.25f) / increment) * increment;
                  closesty = Mathf.Round((transform.position.y - 1.25f) / increment) * increment;

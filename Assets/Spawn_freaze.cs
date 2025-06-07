@@ -6,14 +6,16 @@ public class Spawn_freaze : MonoBehaviour
     public bool spawned;
     public GameObject obj1;
     public GameObject obj2;
+    public GameObject obj3;
     public Testing cone;
     GameObject[] list;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        list = new GameObject[2];
+        list = new GameObject[3];
         list[0] = obj1;
         list[1] = obj2;
+        list[2] = obj3;
     }
 
     // Update is called once per frame
@@ -27,7 +29,7 @@ public class Spawn_freaze : MonoBehaviour
     }
     void spawn()
     {
-        int val = Random.Range(0, 2);
+        int val = Random.Range(0, 3);
 
         GameObject shape = Instantiate(list[val]); //TODO add plase that it spawns
         shape_move s = shape.GetComponent<shape_move>();
