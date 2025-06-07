@@ -48,7 +48,7 @@ public class shape_move : MonoBehaviour
                 int cy = (int)Mathf.Round((transform.position.y - 1.25f) / increment);
                 if (this.gameObject.tag == "Shape_L")
                 {
-                    con.freaze(cx, cy, cx + 1, cy, cx, cy + 1, cx, cy + 2);
+                    con.freaze(cx, 3-cy, cx + 1, 3-cy, cx, 2-cy , cx, 1-cy );
 
                 }
             }
