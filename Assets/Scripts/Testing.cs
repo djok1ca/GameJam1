@@ -49,8 +49,9 @@ public class Testing : MonoBehaviour
                 next = 0;
                 for (int i = 0; i < width; i++)
                 {
-                    if (grid.gridArray[i, j] < 0 && grid.flagMatrix[i, j] == false)//fixati da proverava da li je sledece polje -1 i da ga prebaci ako nije zaledjeno
+                    if (grid.gridArray[i, j] < 0 && grid.flagMatrix[i, j] == false)
                     {
+
                         prev = next;
                         next = 0;
                         if (grid.gridArray[i + 1, j] >= 0)//moze bez granjanja
@@ -150,10 +151,15 @@ public class Testing : MonoBehaviour
         {
         if (tip == 1)
         {
-            grid.Freeze(fx1, fy1);
-            grid.Freeze(fx2, fy2);
-            grid.Freeze(fx3, fy3);
-            grid.Freeze(fx4, fy4);
+           // grid.Freeze(fx1, fy1);
+          // grid.Freeze(fx2, fy2);
+           // grid.Freeze(fx3, fy3);
+            //grid.Freeze(fx4, fy4);
+
+            grid.Rewind(fx1, fy1);
+            grid.Rewind(fx2, fy2);
+            grid.Rewind(fx3, fy3);
+            grid.Rewind(fx4, fy4);
         }
         #region matrica
         /*grid.setValue(0, 0, 0);

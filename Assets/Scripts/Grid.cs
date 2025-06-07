@@ -121,7 +121,31 @@ public class Grid
 
         if (x >= 0 && y >= 0 && x < width && y < height)
         {
-            rewindMatrix[x, y] = true;
+            //vratiti na polje iza
+            if (gridArray[x, y] < 0)
+            {
+                if(x == 0)
+                {
+                    setValue(x, y, 0);
+                }
+                else
+                {
+                    setValue(x - 1, y, gridArray[x, y] + gridArray[x-1,y]);
+                    setValue(x, y, 0);
+                }
+            }
+            if (gridArray[x, y] > 0)
+            {
+                if (x == width-1)
+                {
+                    setValue(x, y, 0);
+                }
+                else
+                {
+                    setValue(x + 1, y, gridArray[x, y] + gridArray[x + 1, y]);
+                    setValue(x, y, 0);
+                }
+            }
         }
     }
 
