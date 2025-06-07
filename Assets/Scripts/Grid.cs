@@ -1,13 +1,17 @@
 using UnityEngine;
 using CodeMonkey.Utils;
 using System.Xml.Serialization;
+using UnityEngine.PlayerLoop;
+using Unity.VisualScripting;
+using System.Security.Cryptography;
 public class Grid
 {
     private int width;
     private int height;
     private float cellSize;
-    private int[,] gridArray;
+    public int[,] gridArray;
     private TextMesh[,] debugTextArray;
+    int time = 0;
 
     [Header("Grid Stats")]
     [SerializeField] private int  _gridOffset = 0;
@@ -80,4 +84,7 @@ public class Grid
         GetXY(worldPosition, out x, out y);
         return GetValue(x, y);
     }
+
+    
+
 }
