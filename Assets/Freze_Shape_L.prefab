@@ -4858,12 +4858,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922783844835400168}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16.3751, y: -3.04673, z: -1}
   m_LocalScale: {x: 2.7, y: 2.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7509738200612288528}
+  m_Father: {fileID: 1426303658370492951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3232467236158886649
 SpriteRenderer:
@@ -4945,12 +4945,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988682710888410808}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -16.3751, y: -3.04673, z: 7}
   m_LocalScale: {x: 2.7, y: 2.7, z: 0.949}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7509738200612288528}
+  m_Father: {fileID: 1426303658370492951}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6270837356545919535
 SpriteRenderer:
@@ -9867,11 +9867,11 @@ Transform:
   m_GameObject: {fileID: 2914302982406148560}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.06, y: 0.059999943, z: -5}
+  m_LocalPosition: {x: -16.435099, y: -2.98673, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7509738200612288528}
+  m_Father: {fileID: 1426303658370492951}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &7663226496558502895
 ParticleSystem:
@@ -15021,6 +15021,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &4762644863771510339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1426303658370492951}
+  m_Layer: 0
+  m_Name: frezee_squere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1426303658370492951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4762644863771510339}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 16.3751, y: 3.04673, z: -5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4953974330528499627}
+  - {fileID: 244321037040576595}
+  - {fileID: 2602105611187172713}
+  m_Father: {fileID: 7509738200612288528}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5525649646233017090
 GameObject:
   m_ObjectHideFlags: 0
@@ -20059,18 +20093,16 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2602105611187172713}
   - {fileID: 656938693665096732}
-  - {fileID: 244321037040576595}
   - {fileID: 8680878440408154232}
   - {fileID: 590757002211885240}
   - {fileID: 3422616552551481193}
   - {fileID: 7212875935601558754}
   - {fileID: 5965321144652461255}
-  - {fileID: 4953974330528499627}
   - {fileID: 3209387094985364739}
   - {fileID: 140313929994094613}
   - {fileID: 3531004337572642548}
+  - {fileID: 1426303658370492951}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &8967849820079369670
