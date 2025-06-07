@@ -21,10 +21,10 @@ public class Testing : MonoBehaviour
     private void Update()
     {
 
-        // if(Input.GetMouseButtonDown(0))
-        // {
-        //      grid.setValue(UtilsClass.GetMouseWorldPosition(), 56);
-        //}
+        if(Input.GetMouseButtonDown(0))
+         {
+              grid.Freeze(UtilsClass.GetMouseWorldPosition());
+        }
 
 
         if (Input.GetMouseButtonDown(1))
@@ -38,6 +38,7 @@ public class Testing : MonoBehaviour
         ++time;
         if (time == 100)
         {
+            
             Debug.Log("nes");
             time = 0;
             //pomeranje
@@ -47,7 +48,7 @@ public class Testing : MonoBehaviour
                 next = 0;
                 for (int i = 0; i < width; i++)
                 {
-                    if (grid.gridArray[i, j] < 0)//fixati da proverava da li je sledece polje -1 i da ga prebaci ako nije zaledjeno
+                    if (grid.gridArray[i, j] < 0 && grid.flagMatrix[i, j] == false)//fixati da proverava da li je sledece polje -1 i da ga prebaci ako nije zaledjeno
                     {
                         prev = next;
                         next = 0;
@@ -59,11 +60,19 @@ public class Testing : MonoBehaviour
                         }
                         else
                         {
-
-                            next = grid.gridArray[i + 1, j];
-                            grid.setValue(i + 1, j, grid.gridArray[i, j]);
-                            grid.setValue(i, j, prev);
-                            prev = 0;
+                            if (grid.flagMatrix[i + 1, j])
+                            {
+                                grid.setValue(i + 1, j, grid.gridArray[i + 1, j] + grid.gridArray[i, j]);
+                                grid.setValue(i, j, prev);
+                                prev = 0;
+                            }
+                            else {
+                                next = grid.gridArray[i + 1, j];
+                                grid.setValue(i + 1, j, grid.gridArray[i, j]);
+                                grid.setValue(i, j, prev);
+                                prev = 0;
+                            }
+                         
                         }
                         if ((i + 1) == width - 1)
                         { Debug.Log("Pobedio igrac 1"); }
@@ -72,7 +81,7 @@ public class Testing : MonoBehaviour
                     }
 
 
-                    if (grid.gridArray[i, j] == 0 && next != 0)
+                    if (grid.gridArray[i, j] == 0 && next != 0 && grid.flagMatrix[i, j] == false)
                     {
                         //grid.gridArray[i + 1, j] = prev;
                         prev = next;
@@ -81,26 +90,20 @@ public class Testing : MonoBehaviour
                         grid.setValue(i, j, prev);
                     }
 
-                    if (grid.gridArray[i, j] > 0)
+                    if (grid.gridArray[i, j] > 0 && grid.flagMatrix[i, j] == false)
                     {
                         // gridArray[i, j] = 0;
                         // gridArray[i - 1, j] = 2;
-                        if (grid.gridArray[i - 1, j] < 0)//moze bez granjanja
-                        {
-                            // grid.gridArray[i - 1, j] += grid.gridArray[i, j];
-                            // grid.gridArray[i, j] = 0;
+                        grid.setValue(i - 1, j, grid.gridArray[i - 1, j] + grid.gridArray[i, j]);
+                        grid.setValue(i, j, 0);
 
-                            grid.setValue(i - 1, j, grid.gridArray[i - 1, j] + grid.gridArray[i, j]);
-                            grid.setValue(i, j, 0);
-                        }
-                        else
-                        {
-                            grid.setValue(i - 1, j, grid.gridArray[i, j]);
-                            grid.setValue(i, j, 0);
-                        }
                         if ((i - 1) == 0)
                         { Debug.Log("Pobedio igrac 2"); }
+
+                        
+                            
                     }
+                    grid.flagMatrix[i, j] = false;
                 }
             }
 
@@ -112,10 +115,12 @@ public class Testing : MonoBehaviour
             grid.setValue(width-1, rn, 1);
 
             //gridArray[width - 1, rn] = 2;
+
         }
     }
         public void freaze(int fx1,int fy1, int fx2,int fy2, int fx3,int fy3, int fx4,int fy4)
     {
         Debug.Log("freze squre are :"+fx1+","+fy1 +" " + fx2+","+fy2+" " + fx3+","+fy3+" " + fx4+","+fy4);
     }
+
 }

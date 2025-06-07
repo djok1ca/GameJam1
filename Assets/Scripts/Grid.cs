@@ -4,6 +4,7 @@ using System.Xml.Serialization;
 using UnityEngine.PlayerLoop;
 using Unity.VisualScripting;
 using System.Security.Cryptography;
+using static UnityEngine.Rendering.DebugUI;
 public class Grid
 {
     private int width;
@@ -12,10 +13,13 @@ public class Grid
     public int[,] gridArray;
     private TextMesh[,] debugTextArray;
     int time = 0;
+    public bool[,] flagMatrix;
+
 
     [Header("Grid Stats")]
     [SerializeField] private int  _gridOffset = 0;
     
+#region GridCreation  
     public Grid(int width, int height, float cellSize) 
     {
         this.width = width;
@@ -25,6 +29,7 @@ public class Grid
 
         gridArray = new int[width, height];
         debugTextArray = new TextMesh[width, height];
+        flagMatrix = new bool[width, height];
 
         for(int x = 0; x < gridArray.GetLength(0); x++) 
         {
@@ -85,6 +90,23 @@ public class Grid
         return GetValue(x, y);
     }
 
-    
+    #endregion
+
+    #region GameAbilities
+
+    public void Freeze(Vector3 worldPosition)
+    {
+        int x, y;
+        GetXY(worldPosition, out x, out y);
+
+        if (x >= 0 && y >= 0 && x < width && y < height)
+        {
+            flagMatrix[x, y] = true;
+        }
+    }
+
+
+
+    #endregion 
 
 }
