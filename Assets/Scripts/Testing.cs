@@ -132,8 +132,10 @@ public class Testing : MonoBehaviour
                     grid.flagMatrix[k, j] = false;
                     grid.rewindMatrix[k, j] = false;
                 }
-
+            
             }
+
+            grid.TeleportGive();
 
             //stvaranje vojnika
             int rn = Random.Range(0, height);
@@ -163,6 +165,14 @@ public class Testing : MonoBehaviour
             grid.Rewind(fx2, fy2);
             grid.Rewind(fx3, fy3);
             grid.Rewind(fx4, fy4);
+        }
+        if (tip == 3)
+        {
+
+            grid.TeleportTake(fx1, fy1);
+            grid.TeleportTake(fx2, fy2);
+            grid.TeleportTake(fx3, fy3);
+            grid.TeleportTake(fx4, fy4);
         }
         #region matrica
         /*grid.setValue(0, 0, 0);

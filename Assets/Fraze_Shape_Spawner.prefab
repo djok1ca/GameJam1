@@ -47,3 +47,9 @@ MonoBehaviour:
   spawned: 0
   obj1: {fileID: 782853104632084195, guid: 4159ff7f4d5d5dc479048d580d8744b4, type: 3}
   obj2: {fileID: 8578258157472672905, guid: a3fa6111624a5c64990f206fe12510b7, type: 3}
+  obj3: {fileID: 133689448052898229, guid: eafea170242856d4d85b59fa0afae56d, type: 3}
+  obj4: {fileID: 636360526301700771, guid: df238a85415797b4d935235fe938866d, type: 3}
+  obj5: {fileID: 1895583038768450712, guid: 0123ddb64029fd041bfbbb060a385fad, type: 3}
+  obj6: {fileID: 2586899861022048705, guid: 693362697ace1b44c9935481d33dad75, type: 3}
+  obj7: {fileID: 636360526301700771, guid: df238a85415797b4d935235fe938866d, type: 3}
+  cone: {fileID: 0}
