@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class shape_move : MonoBehaviour
 {
-      private bool dragging = false;
-      public float x = 1.25f;
+    private bool dragging = false;
+    public float x = 1.25f;
     public float increment = 2.5f;
     public bool exists;
     public Spawn_freaze a;
     public Testing con;
-  private Vector3 offset;
+    private Vector3 offset;
 
     void Start()
     {
