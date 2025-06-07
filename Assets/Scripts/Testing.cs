@@ -40,7 +40,6 @@ public class Testing : MonoBehaviour
         if (time == 100)
         {
             
-            Debug.Log("nes");
             time = 0;
             //pomeranje
             for (int j = 0; j < height; j++)
