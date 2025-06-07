@@ -130,6 +130,7 @@ public class Testing : MonoBehaviour
                 for (int k = 0; k < width; k++)
                 {
                     grid.flagMatrix[k, j] = false;
+                    grid.rewindMatrix[k, j] = false;
                 }
 
             }

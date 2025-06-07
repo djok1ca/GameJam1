@@ -14,6 +14,7 @@ public class Grid
     private TextMesh[,] debugTextArray;
     int time = 0;
     public bool[,] flagMatrix;
+    public bool[,] rewindMatrix;
 
 
     [Header("Grid Stats")]
@@ -30,8 +31,9 @@ public class Grid
         gridArray = new int[width, height];
         debugTextArray = new TextMesh[width, height];
         flagMatrix = new bool[width, height];
+        rewindMatrix = new bool[width, height];
 
-        for(int x = 0; x < gridArray.GetLength(0); x++) 
+        for (int x = 0; x < gridArray.GetLength(0); x++) 
         {
             for(int y = 0; y < gridArray.GetLength(1); y++)
             {
@@ -111,6 +113,15 @@ public class Grid
         if (x >= 0 && y >= 0 && x < width && y < height)
         {
             flagMatrix[x, y] = true;
+        }
+    }
+
+    public void Rewind(int x, int y)
+    {
+
+        if (x >= 0 && y >= 0 && x < width && y < height)
+        {
+            rewindMatrix[x, y] = true;
         }
     }
 
