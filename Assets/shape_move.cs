@@ -1,3 +1,5 @@
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class shape_move : MonoBehaviour
@@ -5,11 +7,15 @@ public class shape_move : MonoBehaviour
       private bool dragging = false;
       public float x = 1.25f;
     public float increment = 2.5f;
+    public bool exists;
+    public Spawn_freaze a;
   private Vector3 offset;
 
     void Start()
     {
-       Debug.Log("Object clicked!");
+        GameObject spawner = GameObject.FindWithTag("Shape_spawner");
+        
+       //a = spawner;
     }
 
     void Update()
@@ -30,10 +36,12 @@ public class shape_move : MonoBehaviour
         }
 
         // Release mouse
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && dragging)
         {
-
+            Destroy(this.gameObject);
+            exists = false;
             dragging = false;
+            a.spawned = false;
         }
 
         // Move object if dragging

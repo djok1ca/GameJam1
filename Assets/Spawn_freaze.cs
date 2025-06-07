@@ -26,8 +26,9 @@ public class Spawn_freaze : MonoBehaviour
     void spawn()
     {
         int val = Random.Range(0, 2);
-        
-        GameObject shape = Instantiate(list[val]); //TODO add plase that it spawns
 
+        GameObject shape = Instantiate(list[val]); //TODO add plase that it spawns
+        shape_move s = shape.GetComponent<shape_move>();
+        s.a = this;
     }
 }

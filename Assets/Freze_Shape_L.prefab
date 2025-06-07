@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 9123955639090891946}
   m_Layer: 0
   m_Name: Freze_Shape_L
-  m_TagString: Untagged
+  m_TagString: Shape_L
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -452,3 +452,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: 1.25
   increment: 2.5
+  exists: 0
+  a: {fileID: 0}
