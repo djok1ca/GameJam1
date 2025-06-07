@@ -121,12 +121,50 @@ public class Testing : MonoBehaviour
         public void freaze(int fx1,int fy1, int fx2,int fy2, int fx3,int fy3, int fx4,int fy4)
         {
 
-        grid.Freeze(fy1, fx1);
-        grid.Freeze(fy2, fx2);
-        grid.Freeze(fy3, fx3);
-        grid.Freeze(fy4, fx4);
+        grid.Freeze(fx1, fy1);
+        grid.Freeze(fx2, fy2);
+        grid.Freeze(fx3, fy3);
+        grid.Freeze(fx4, fy4);
 
-        
+        #region matrica
+        /*grid.setValue(0, 0, 0);
+        grid.setValue(1, 0, 1);
+        grid.setValue(2, 0, 2);
+        grid.setValue(3, 0, 3);
+        grid.setValue(4, 0, 4);
+        grid.setValue(5, 0, 5);
+        grid.setValue(6, 0, 6);
+        grid.setValue(7, 0, 7);
+
+        grid.setValue(0, 1, 8);
+        grid.setValue(1, 1, 9);
+        grid.setValue(2, 1, 10);
+        grid.setValue(3, 1, 11);
+        grid.setValue(4, 1, 12);
+        grid.setValue(5, 1, 13);
+        grid.setValue(6, 1, 14);
+        grid.setValue(7, 1, 15);
+
+        grid.setValue(0, 2, 16);
+        grid.setValue(1, 2, 17);
+        grid.setValue(2, 2, 18);
+        grid.setValue(3, 2, 19);
+        grid.setValue(4, 2, 20);
+        grid.setValue(5, 2, 21);
+        grid.setValue(6, 2, 22);
+        grid.setValue(7, 2, 23);
+
+        grid.setValue(0, 3, 24);
+        grid.setValue(1, 3, 25);
+        grid.setValue(2, 3, 26);
+        grid.setValue(3, 3, 27);
+        grid.setValue(4, 3, 28);
+        grid.setValue(5, 3, 29);
+        grid.setValue(6, 3, 30);
+        grid.setValue(7, 3, 31);
+
+*/
+        #endregion
         Debug.Log("freze squre are :"+fx1+","+fy1 +" " + fx2+","+fy2+" " + fx3+","+fy3+" " + fx4+","+fy4);
 
         for (int i = 0; i < height; i++)
