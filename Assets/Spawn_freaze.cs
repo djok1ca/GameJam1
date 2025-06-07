@@ -16,6 +16,7 @@ public class Spawn_freaze : MonoBehaviour
         list[0] = obj1;
         list[1] = obj2;
         list[2] = obj3;
+        //spawn();
     }
 
     // Update is called once per frame
