@@ -134,7 +134,7 @@ public class Grid
                     setValue(x, y, 0);
                 }
             }
-            if (gridArray[x, y] > 0)
+            if (gridArray[x, y] > 0)//fixati kao za -1 u normalnoj
             {
                 if (x == width-1)
                 {

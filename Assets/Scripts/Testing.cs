@@ -159,6 +159,7 @@ public class Testing : MonoBehaviour
         }
         if(tip == 2)
         {
+
             grid.Rewind(fx1, fy1);
             grid.Rewind(fx2, fy2);
             grid.Rewind(fx3, fy3);
