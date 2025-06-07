@@ -8,7 +8,8 @@ public class Testing : MonoBehaviour
     public int height = 4;
    // private int[,] gridArray;
     private int time = 0;
-
+    private int prev = 0;
+    private int next = 0;
  
 
     private void Start()
@@ -19,10 +20,10 @@ public class Testing : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            grid.setValue(UtilsClass.GetMouseWorldPosition(), 56);
-        }
+       // if(Input.GetMouseButtonDown(0))
+       // {
+      //      grid.setValue(UtilsClass.GetMouseWorldPosition(), 56);
+        //}
 
         if(Input.GetMouseButtonDown (1))
         {
@@ -44,21 +45,21 @@ public class Testing : MonoBehaviour
                 {
                     if (grid.gridArray[i,j] < 0)//fixati da proverava da li je sledece polje -1 i da ga prebaci ako nije zaledjeno
                     {
-                        
-                            // gridArray[i, j] = 0;
-                            //  gridArray[i + 1, j] = 1;
-                        if (grid.gridArray[i+1, j] > 0 )//moze bez granjanja
+                        prev = next;
+                        next = 0;
+                        if (grid.gridArray[i+1, j] >= 0 )//moze bez granjanja
                         {
-                            //grid.gridArray[i + 1, j] += grid.gridArray[i, j];
-                           // grid.gridArray[i, j] = 0;
                             grid.setValue(i + 1, j, grid.gridArray[i + 1, j] + grid.gridArray[i, j]);
-                            grid.setValue(i, j, 0);
+                            grid.setValue(i, j, prev);
+                            prev = 0;
                         }
                         else
                         {
-                     
+                            
+                            next = grid.gridArray[i + 1, j];
                             grid.setValue(i + 1, j, grid.gridArray[i, j]);
-                            grid.setValue(i, j, 0);
+                            grid.setValue(i, j, prev);
+                            prev = 0;
                         }
                         if ((i + 1) == width-1)
                         { Debug.Log("Pobedio igrac 1"); }
@@ -66,8 +67,15 @@ public class Testing : MonoBehaviour
                         
                     }
 
-                   
-                    
+
+                    if (grid.gridArray[i, j] == 0 && next != 0)
+                    {
+                        //grid.gridArray[i + 1, j] = prev;
+                        prev = next;
+                        next = 0;
+                        //grid.gridArray[i + 1, j] = prev;
+                        grid.setValue(i, j, prev);
+                    }
 
                     if (grid.gridArray[i, j] > 0)
                     {
