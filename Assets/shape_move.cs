@@ -30,9 +30,9 @@ public class shape_move : MonoBehaviour
             if (GetComponent<Collider2D>().OverlapPoint(mouseWorldPos))
             {
                 offset = transform.position - mouseWorldPos;
-         
+
                 Debug.Log(offset);
-                    dragging = true;
+                dragging = true;
             }
         }
 
@@ -58,7 +58,7 @@ public class shape_move : MonoBehaviour
                 }
                 else if (this.gameObject.tag == "Shape_I")
                 {
-                    con.freaze(cx, 3 - cy, cx , 2 - cy, cx, 1 - cy, cx  , cy);
+                    con.freaze(cx, 3 - cy, cx, 2 - cy, cx, 1 - cy, cx, cy);
                 }
                 else
                 {
@@ -77,14 +77,16 @@ public class shape_move : MonoBehaviour
             if (transform.position.x > -1f && transform.position.x < 19.5f && transform.position.y > -2.25f && transform.position.y < 9.75f)
             {
                 closestx = Mathf.Round((transform.position.x - 1.25f) / increment) * increment;
-                 closesty = Mathf.Round((transform.position.y - 1.25f) / increment) * increment;
+                closesty = Mathf.Round((transform.position.y - 1.25f) / increment) * increment;
             }
             else
-            {closestx = transform.position.x;
+            {
+                closestx = transform.position.x;
                 closesty = transform.position.y;
-                }
-            transform.position = new Vector3(closestx+1.25f,closesty+1.25f,transform.position.z);
+            }
+            transform.position = new Vector3(closestx + 1.25f, closesty + 1.25f, transform.position.z);
         }
+         
     }
 }
 
