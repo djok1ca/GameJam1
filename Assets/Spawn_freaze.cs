@@ -15,7 +15,7 @@ public class Spawn_freaze : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        list = new GameObject[5];
+        list = new GameObject[6];
         list[0] = obj1;
         list[1] = obj2;
         list[2] = obj3;
