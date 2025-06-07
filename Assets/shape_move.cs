@@ -11,7 +11,7 @@ public class shape_move : MonoBehaviour
     public Spawn_freaze a;
     public Testing con;
     private Vector3 offset;
-
+    public int tip;
     void Start()
     {
         GameObject spawner = GameObject.FindWithTag("Shape_spawner");
