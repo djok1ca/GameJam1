@@ -39,7 +39,7 @@ public class shape_move : MonoBehaviour
         // Release mouse
         if (Input.GetMouseButtonUp(0) && dragging)
         {
-            if (transform.position.x > 0f && transform.position.x < 13f && transform.position.y > -1.25f && transform.position.y < 8.75f)
+            if (transform.position.x > 0f && transform.position.x < 18f && transform.position.y > -1.25f && transform.position.y < 8.75f)
             {
                 Destroy(this.gameObject);
                 exists = false;
@@ -61,7 +61,7 @@ public class shape_move : MonoBehaviour
             float closestx;
             float closesty;
             transform.position = mouseWorldPos + offset;
-            if (transform.position.x > 0f && transform.position.x < 13f && transform.position.y > -1.25f && transform.position.y < 8.75f)
+            if (transform.position.x > 0f && transform.position.x < 18f && transform.position.y > -1.25f && transform.position.y < 8.75f)
             {
                 closestx = Mathf.Round((transform.position.x - 1.25f) / increment) * increment;
                  closesty = Mathf.Round((transform.position.y - 1.25f) / increment) * increment;
