@@ -150,12 +150,15 @@ public class Testing : MonoBehaviour
         public void freaze(int fx1,int fy1, int fx2,int fy2, int fx3,int fy3, int fx4,int fy4,int tip)
         {
         if (tip == 1)
-        {
-           // grid.Freeze(fx1, fy1);
-          // grid.Freeze(fx2, fy2);
-           // grid.Freeze(fx3, fy3);
-            //grid.Freeze(fx4, fy4);
+        { 
+            grid.Freeze(fx1, fy1);
+            grid.Freeze(fx2, fy2);
+            grid.Freeze(fx3, fy3);
+            grid.Freeze(fx4, fy4);
 
+        }
+        if(tip == 2)
+        {
             grid.Rewind(fx1, fy1);
             grid.Rewind(fx2, fy2);
             grid.Rewind(fx3, fy3);
