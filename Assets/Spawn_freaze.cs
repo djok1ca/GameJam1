@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class Spawn_freaze : MonoBehaviour
@@ -5,6 +6,7 @@ public class Spawn_freaze : MonoBehaviour
     public bool spawned;
     public GameObject obj1;
     public GameObject obj2;
+    public Testing cone;
     GameObject[] list;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,6 +31,7 @@ public class Spawn_freaze : MonoBehaviour
 
         GameObject shape = Instantiate(list[val]); //TODO add plase that it spawns
         shape_move s = shape.GetComponent<shape_move>();
+        s.con = cone;
         s.a = this;
     }
 }

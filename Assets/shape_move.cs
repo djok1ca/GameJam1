@@ -9,6 +9,7 @@ public class shape_move : MonoBehaviour
     public float increment = 2.5f;
     public bool exists;
     public Spawn_freaze a;
+    public Testing con;
   private Vector3 offset;
 
     void Start()
@@ -38,10 +39,20 @@ public class shape_move : MonoBehaviour
         // Release mouse
         if (Input.GetMouseButtonUp(0) && dragging)
         {
-            Destroy(this.gameObject);
-            exists = false;
+            if (transform.position.x > 0f && transform.position.x < 13f && transform.position.y > -1.25f && transform.position.y < 8.75f)
+            {
+                Destroy(this.gameObject);
+                exists = false;
+                a.spawned = false;
+                int cx = (int)Mathf.Round((transform.position.x - 1.25f) / increment);
+                int cy = (int)Mathf.Round((transform.position.y - 1.25f) / increment);
+                if (this.gameObject.tag == "Shape_L")
+                {
+                    con.freaze(cx, cy, cx + 1, cy, cx, cy + 1, cx, cy + 2);
+
+                }
+            }
             dragging = false;
-            a.spawned = false;
         }
 
         // Move object if dragging
