@@ -4,7 +4,7 @@ public class Testing : MonoBehaviour
 {
     private Grid grid;
 
-    public int width = 7;
+    public int width = 8;
     public int height = 4;
     // private int[,] gridArray;
     private int time = 0;
@@ -22,8 +22,8 @@ public class Testing : MonoBehaviour
     {
 
         if(Input.GetMouseButtonDown(0))
-         {
-              grid.Freeze(UtilsClass.GetMouseWorldPosition());
+        {
+              //grid.Freeze(UtilsClass.GetMouseWorldPosition());
         }
 
 
@@ -119,8 +119,25 @@ public class Testing : MonoBehaviour
         }
     }
         public void freaze(int fx1,int fy1, int fx2,int fy2, int fx3,int fy3, int fx4,int fy4)
-    {
+        {
+
+        grid.Freeze(fy1, fx1);
+        grid.Freeze(fy2, fx2);
+        grid.Freeze(fy3, fx3);
+        grid.Freeze(fy4, fx4);
+
+        
         Debug.Log("freze squre are :"+fx1+","+fy1 +" " + fx2+","+fy2+" " + fx3+","+fy3+" " + fx4+","+fy4);
+
+        for (int i = 0; i < height; i++)
+        {
+            for (int j = 0; j < width; j++)
+            {
+                Debug.Log(i + " " + j);
+                Debug.Log(grid.flagMatrix[j, i].ToString());
+            }
+        }
+
     }
 
 }

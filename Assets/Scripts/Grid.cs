@@ -105,7 +105,14 @@ public class Grid
         }
     }
 
-
+    public void Freeze(int x, int y)
+    {
+       
+        if (x >= 0 && y >= 0 && x < width && y < height)
+        {
+            flagMatrix[x, y] = true;
+        }
+    }
 
     #endregion 
 

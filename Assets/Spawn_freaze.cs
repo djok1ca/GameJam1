@@ -32,7 +32,9 @@ public class Spawn_freaze : MonoBehaviour
     {
         int val = Random.Range(0, 3);
 
+        Vector3 offset = new Vector3(-5, -1, 0);
         GameObject shape = Instantiate(list[val]); //TODO add plase that it spawns
+        shape.transform.position = offset;
         shape_move s = shape.GetComponent<shape_move>();
         s.con = cone;
         s.a = this;

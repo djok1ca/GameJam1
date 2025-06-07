@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8372156156462355915}
-  - component: {fileID: 8659157540052642758}
   - component: {fileID: 549165928279458750}
+  - component: {fileID: 1293588297621153726}
   m_Layer: 0
   m_Name: Freze_Shape_I
   m_TagString: Shape_I
@@ -37,8 +37,25 @@ Transform:
   - {fileID: 5586218605471885153}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!60 &8659157540052642758
-PolygonCollider2D:
+--- !u!114 &549165928279458750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133689448052898229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a47c51317c3674f87716293d733977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 1.25
+  increment: 2.5
+  exists: 0
+  a: {fileID: 0}
+  con: {fileID: 0}
+--- !u!61 &1293588297621153726
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -71,7 +88,7 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.026622534, y: 3.6991715}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -81,30 +98,8 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -1.25, y: -1.25}
-      - {x: 1.25, y: -1.25}
-      - {x: 10, y: 13.75}
-      - {x: -10, y: 20}
-  m_UseDelaunayMesh: 0
---- !u!114 &549165928279458750
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 133689448052898229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7a47c51317c3674f87716293d733977, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 1.25
-  increment: 2.5
-  exists: 0
-  a: {fileID: 0}
-  con: {fileID: 0}
+  m_Size: {x: 2.4376264, y: 9.995706}
+  m_EdgeRadius: 0
 --- !u!1 &442451709892287998
 GameObject:
   m_ObjectHideFlags: 0
