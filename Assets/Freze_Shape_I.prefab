@@ -54,6 +54,7 @@ MonoBehaviour:
   exists: 0
   a: {fileID: 0}
   con: {fileID: 0}
+  tip: 1
 --- !u!61 &1293588297621153726
 BoxCollider2D:
   m_ObjectHideFlags: 0
