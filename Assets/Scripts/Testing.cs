@@ -1,5 +1,6 @@
 using UnityEngine;
 using CodeMonkey.Utils;
+using UnityEngine.Jobs;
 public class Testing : MonoBehaviour
 {
     private Grid grid;
@@ -54,9 +55,19 @@ public class Testing : MonoBehaviour
                         next = 0;
                         if (grid.gridArray[i + 1, j] >= 0)//moze bez granjanja
                         {
-                            grid.setValue(i + 1, j, grid.gridArray[i + 1, j] + grid.gridArray[i, j]);
-                            grid.setValue(i, j, prev);
-                            prev = 0;
+                            if (grid.flagMatrix[i + 1, j] == true)
+                            {
+                                grid.setValue(i + 1, j, grid.gridArray[i, j]);
+                                grid.setValue(i, j, prev);
+                                prev = 0;
+                            }
+                            else
+                            {
+                                grid.setValue(i + 1, j, grid.gridArray[i + 1, j] + grid.gridArray[i, j]);
+                                grid.setValue(i, j, prev);
+                                prev = 0;
+                            }
+                            
                         }
                         else
                         {
@@ -94,8 +105,19 @@ public class Testing : MonoBehaviour
                     {
                         // gridArray[i, j] = 0;
                         // gridArray[i - 1, j] = 2;
-                        grid.setValue(i - 1, j, grid.gridArray[i - 1, j] + grid.gridArray[i, j]);
-                        grid.setValue(i, j, 0);
+
+                        if (grid.flagMatrix[i - 1, j] == true && grid.gridArray[i-1,j] < 0)
+                        {
+                            grid.setValue(i - 1, j, grid.gridArray[i, j]);
+                            grid.setValue(i, j, 0);
+                        }
+                        
+                        else
+                        {
+                            grid.setValue(i - 1, j, grid.gridArray[i - 1, j] + grid.gridArray[i, j]);
+                            grid.setValue(i, j, 0);
+                        }
+                            
 
                         if ((i - 1) == 0)
                         { Debug.Log("Pobedio igrac 2"); }
@@ -103,8 +125,13 @@ public class Testing : MonoBehaviour
                         
                             
                     }
-                    grid.flagMatrix[i, j] = false;
                 }
+
+                for (int k = 0; k < width; k++)
+                {
+                    grid.flagMatrix[k, j] = false;
+                }
+
             }
 
             //stvaranje vojnika
