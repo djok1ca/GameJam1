@@ -4,7 +4,7 @@ public class Testing : MonoBehaviour
 {
     private Grid grid;
 
-    public int width = 6;
+    public int width = 7;
     public int height = 4;
    // private int[,] gridArray;
     private int time = 0;
@@ -20,10 +20,10 @@ public class Testing : MonoBehaviour
 
     private void Update()
     {
-       // if(Input.GetMouseButtonDown(0))
-       // {
-      //      grid.setValue(UtilsClass.GetMouseWorldPosition(), 56);
-        //}
+        if(Input.GetMouseButtonDown(0))
+        {
+            grid.setValue(UtilsClass.GetMouseWorldPosition(), 56);
+        }
 
         if(Input.GetMouseButtonDown (1))
         {
@@ -103,10 +103,10 @@ public class Testing : MonoBehaviour
             }
 
             //stvaranje vojnika
-            int rn = Random.Range(0, 4);
+            int rn = Random.Range(0, height);
             //gridArray[0, rn] = 1;
             grid.setValue(0, rn, -1);
-            rn = Random.Range(0, 4);
+            rn = Random.Range(0, height);
             grid.setValue(width-1, rn, 1);
             //gridArray[width - 1, rn] = 2;
         }
