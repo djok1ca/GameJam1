@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3435440955436124770}
   - component: {fileID: 606934035783817464}
   - component: {fileID: 8218025730340017317}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Warrior_Blue_
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 12
   m_Sprite: {fileID: 5013799040997709749, guid: ca96f783f89c90148b95ce5b2d52e92e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -5,7 +5,7 @@ using UnityEngine.PlayerLoop;
 using Unity.VisualScripting;
 using System.Security.Cryptography;
 using static UnityEngine.Rendering.DebugUI;
-public class Grid
+public class Grid : MonoBehaviour
 {
     private int width;
     private int height;
@@ -18,17 +18,26 @@ public class Grid
     public int[,] teleportMatrix;
     public int[,] teleportMatrixCountDown;
 
+    public GameObject Warrior_Blue_;
+    public GameObject Warrior_Red_0;
+
+    public GameObject[,] vitezovi;
 
     [Header("Grid Stats")]
     [SerializeField] private int  _gridOffset = 0;
+
+
     
-#region GridCreation  
-    public Grid(int width, int height, float cellSize) 
+
+    #region GridCreation  
+    public Grid(int width, int height, float cellSize, GameObject Warrior_Blue_, GameObject Warrior_Red_0) 
     {
         this.width = width;
         this.height = height;
         this.cellSize = cellSize;
-        
+        this.Warrior_Blue_ = Warrior_Blue_;
+        this.Warrior_Red_0 = Warrior_Red_0;
+
 
         gridArray = new int[width, height];
         debugTextArray = new TextMesh[width, height];
@@ -36,13 +45,14 @@ public class Grid
         rewindMatrix = new bool[width, height];
         teleportMatrix = new int[width,height];
         teleportMatrixCountDown = new int[width, height];
+        vitezovi = new GameObject[width, height];
 
         for (int x = 0; x < gridArray.GetLength(0); x++) 
         {
             for(int y = 0; y < gridArray.GetLength(1); y++)
             {
                 
-                debugTextArray[x, y] =  UtilsClass.CreateWorldText(gridArray[x, y].ToString(), null, GetWorldPosition(x - _gridOffset, y - _gridOffset) + new Vector3(cellSize,cellSize)*0.5f, 30, Color.white, TextAnchor.MiddleCenter);
+                debugTextArray[x, y] =  UtilsClass.CreateWorldText(" ", null, GetWorldPosition(x - _gridOffset, y - _gridOffset) + new Vector3(cellSize,cellSize)*0.2f, 10, Color.sandyBrown, TextAnchor.MiddleCenter);
                 Debug.DrawLine(GetWorldPosition(x- _gridOffset, y - _gridOffset), GetWorldPosition(x - _gridOffset, y + 1 - _gridOffset), Color.white, float.PositiveInfinity);
                 Debug.DrawLine(GetWorldPosition(x- _gridOffset, y - _gridOffset), GetWorldPosition(x+1 - _gridOffset, y  - _gridOffset), Color.white, float.PositiveInfinity);
             }
@@ -64,12 +74,45 @@ public class Grid
         return new Vector3(x,y) * cellSize; 
     }
 
+    private Vector3 GetWorldPositionKnight(int x, int y)
+    {
+        return new Vector3(x+0.5f, y+0.8f) * cellSize;
+    }
     public void setValue(int x, int y, int value) 
     {
         if(x >= 0 && y >= 0 && x < width && y < height) 
         {
             gridArray[x, y] = value;
-            debugTextArray[x, y].text = gridArray[x,y].ToString();
+            
+            if(value < 0)
+            {
+                int pom = -gridArray[x, y];
+                debugTextArray[x, y].text = pom.ToString();
+                if (vitezovi[x, y] != null)
+                {
+                    Destroy(vitezovi[x, y]);
+                }
+                vitezovi[x,y] = Instantiate(Warrior_Blue_, GetWorldPositionKnight(x,y), Quaternion.identity);
+            }
+            if(value > 0)
+            {
+                debugTextArray[x, y].text = gridArray[x, y].ToString();
+                if (vitezovi[x, y] != null)
+                {
+                    Destroy(vitezovi[x, y]);
+                }
+                vitezovi[x, y] = Instantiate(Warrior_Red_0, GetWorldPositionKnight(x, y), Quaternion.identity);
+            }
+            if(value == 0)
+            {
+                debugTextArray[x, y].text = " ";
+                if (vitezovi[x, y] != null)
+                {
+                    Destroy(vitezovi[x, y]);
+                }
+                
+            }
+
         }
         
     }

@@ -12,10 +12,12 @@ public class Testing : MonoBehaviour
     private int prev = 0;
     private int next = 0;
 
-
+    public GameObject Warrior_Blue_;
+    public GameObject Warrior_Red_0;
+    public Spawn_freaze shape_spawn;
     private void Start()
     {
-        grid = new Grid(width, height, 2.5f);
+        grid = new Grid(width, height, 2.5f,  Warrior_Blue_, Warrior_Red_0);
         // gridArray = new int[width, height];
     }
 
@@ -37,9 +39,9 @@ public class Testing : MonoBehaviour
     {
 
         ++time;
-        if (time == 100)
+        if (time == 70)
         {
-            
+            shape_spawn.call_spawn();
             time = 0;
             //pomeranje
             for (int j = 0; j < height; j++)
@@ -143,10 +145,12 @@ public class Testing : MonoBehaviour
             grid.setValue(0, rn, -1);
             rn = Random.Range(0, height);
             grid.setValue(width-1, rn, 1);
-
+            rn = Random.Range(0, height);
+            grid.setValue(width - 1, rn, 1);
             //gridArray[width - 1, rn] = 2;
 
         }
+        
     }
         public void freaze(int fx1,int fy1, int fx2,int fy2, int fx3,int fy3, int fx4,int fy4,int tip)
         {
