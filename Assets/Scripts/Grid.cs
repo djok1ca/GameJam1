@@ -9,6 +9,7 @@ public class Grid : MonoBehaviour
 {
     private int width;
     private int height;
+    public bool ended = false;
     private float cellSize;
     public int[,] gridArray;
     private TextMesh[,] debugTextArray;

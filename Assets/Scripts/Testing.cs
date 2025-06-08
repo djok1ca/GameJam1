@@ -1,6 +1,7 @@
 using UnityEngine;
 using CodeMonkey.Utils;
 using UnityEngine.Jobs;
+using UnityEngine.Rendering.Universal;
 public class Testing : MonoBehaviour
 {
     private Grid grid;
@@ -11,6 +12,7 @@ public class Testing : MonoBehaviour
     private int time = 0;
     private int prev = 0;
     private int next = 0;
+    private bool end = false;
 
     public GameObject Warrior_Blue_;
     public GameObject Warrior_Red_0;
@@ -91,6 +93,7 @@ public class Testing : MonoBehaviour
                         if ((i + 1) == width - 1)
                         { 
                             Debug.Log("Pobedio igrac 1");
+                            end = true;
                             time = 1000;
                         }
                         ++i;
@@ -109,27 +112,36 @@ public class Testing : MonoBehaviour
 
                     if (grid.gridArray[i, j] > 0 && grid.flagMatrix[i, j] == false)
                     {
-                        // gridArray[i, j] = 0;
-                        // gridArray[i - 1, j] = 2;
-
-                        if (grid.flagMatrix[i - 1, j] == true && grid.gridArray[i-1,j] < 0)
+                        prev = next;
+                        next = 0;
+                        grid.setValue(i, j,grid.gridArray[i, j] + prev);
+                        prev = 0;
+                        if(grid.gridArray[i, j] > 0)
                         {
-                            grid.setValue(i - 1, j, grid.gridArray[i, j]);
-                            grid.setValue(i, j, 0);
+                            // gridArray[i, j] = 0;
+                            // gridArray[i - 1, j] = 2;
+
+                            if (grid.flagMatrix[i - 1, j] == true && grid.gridArray[i - 1, j] < 0)
+                            {
+                                grid.setValue(i - 1, j, grid.gridArray[i, j]);
+                                grid.setValue(i, j, 0);
+                            }
+
+                            else
+                            {
+                                grid.setValue(i - 1, j, grid.gridArray[i - 1, j] + grid.gridArray[i, j]);
+                                grid.setValue(i, j, 0);
+                            }
+
+
+                            if ((i - 1) == 0)
+                            {
+                                Debug.Log("Pobedio igrac 2");
+                                end = true;
+                                time = 1000;
+                            }
                         }
                         
-                        else
-                        {
-                            grid.setValue(i - 1, j, grid.gridArray[i - 1, j] + grid.gridArray[i, j]);
-                            grid.setValue(i, j, 0);
-                        }
-                            
-
-                        if ((i - 1) == 0)
-                        { 
-                            Debug.Log("Pobedio igrac 2");
-                            time = 1000;
-                        }
 
                         
                             
@@ -143,18 +155,21 @@ public class Testing : MonoBehaviour
                 }
             
             }
+            if(end == false)
+            {
+                grid.TeleportGive();
 
-            grid.TeleportGive();
-
-            //stvaranje vojnika
-            int rn = Random.Range(0, height);
-            //gridArray[0, rn] = 1;
-            grid.setValue(0, rn, -1);
-            rn = Random.Range(0, height);
-            grid.setValue(width-1, rn, 1);
-            rn = Random.Range(0, height);
-            grid.setValue(width - 1, rn, 1);
-            //gridArray[width - 1, rn] = 2;
+                //stvaranje vojnika
+                int rn = Random.Range(0, height);
+                //gridArray[0, rn] = 1;
+                grid.setValue(0, rn, -1);
+                rn = Random.Range(0, height);
+                grid.setValue(width - 1, rn, 1);
+                rn = Random.Range(0, height);
+                grid.setValue(width - 1, rn, 1);
+                //gridArray[width - 1, rn] = 2;
+            }
+            
 
         }
         
