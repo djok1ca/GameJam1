@@ -15,9 +15,10 @@ public class Testing : MonoBehaviour
     public GameObject Warrior_Blue_;
     public GameObject Warrior_Red_0;
     public Spawn_freaze shape_spawn;
+    public GameObject Explosion;
     private void Start()
     {
-        grid = new Grid(width, height, 2.5f,  Warrior_Blue_, Warrior_Red_0);
+        grid = new Grid(width, height, 2.5f, Warrior_Blue_, Warrior_Red_0,Explosion);
         // gridArray = new int[width, height];
     }
 

@@ -21,23 +21,24 @@ public class Grid : MonoBehaviour
     public GameObject Warrior_Blue_;
     public GameObject Warrior_Red_0;
 
+    public GameObject Explosion;
     public GameObject[,] vitezovi;
 
     [Header("Grid Stats")]
     [SerializeField] private int  _gridOffset = 0;
 
-
+    public GameObject[,] eksplozije;
     
 
     #region GridCreation  
-    public Grid(int width, int height, float cellSize, GameObject Warrior_Blue_, GameObject Warrior_Red_0) 
+    public Grid(int width, int height, float cellSize, GameObject Warrior_Blue_, GameObject Warrior_Red_0,GameObject explo) 
     {
         this.width = width;
         this.height = height;
         this.cellSize = cellSize;
         this.Warrior_Blue_ = Warrior_Blue_;
         this.Warrior_Red_0 = Warrior_Red_0;
-
+        this.Explosion = explo;
 
         gridArray = new int[width, height];
         debugTextArray = new TextMesh[width, height];
@@ -46,7 +47,7 @@ public class Grid : MonoBehaviour
         teleportMatrix = new int[width,height];
         teleportMatrixCountDown = new int[width, height];
         vitezovi = new GameObject[width, height];
-
+        eksplozije = new GameObject[width, height];
         for (int x = 0; x < gridArray.GetLength(0); x++) 
         {
             for(int y = 0; y < gridArray.GetLength(1); y++)
