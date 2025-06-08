@@ -4,7 +4,7 @@ using System.Collections;
 public class blue_warrior : MonoBehaviour
 {
     private Animator animator;
-
+    public int mode=0;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -12,11 +12,11 @@ public class blue_warrior : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.V) || mode==1)
         {
             animator.Play("fight");
         }
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) || mode==0)
         {
             animator.Play("run");
         }

@@ -12,7 +12,7 @@ public class Testing : MonoBehaviour
     private int time = 0;
     private int prev = 0;
     private int next = 0;
-    private bool end = false;
+    public bool end = false;
 
     public GameObject Warrior_Blue_;
     public GameObject Warrior_Red_0;
@@ -90,7 +90,7 @@ public class Testing : MonoBehaviour
                                 grid.setValue(i, j, prev);
                                 prev = 0;
                             }
-                            
+
                         }
                         else //ako sledeci
                         {
@@ -100,16 +100,17 @@ public class Testing : MonoBehaviour
                                 grid.setValue(i, j, prev);
                                 prev = 0;
                             }
-                            else {
+                            else
+                            {
                                 next = grid.gridArray[i + 1, j];
                                 grid.setValue(i + 1, j, grid.gridArray[i, j]);
                                 grid.setValue(i, j, prev);
                                 prev = 0;
                             }
-                         
+
                         }
                         if ((i + 1) == width - 1)
-                        { 
+                        {
                             Debug.Log("Pobedio igrac 1");
                             end = true;
                             grid.ended = true;
@@ -133,9 +134,9 @@ public class Testing : MonoBehaviour
                     {
                         prev = next;
                         next = 0;
-                        grid.setValue(i, j,grid.gridArray[i, j] + prev);
+                        grid.setValue(i, j, grid.gridArray[i, j] + prev);
                         prev = 0;
-                        if(grid.gridArray[i, j] > 0)//los vitez potez
+                        if (grid.gridArray[i, j] > 0)//los vitez potez
                         {
                             // gridArray[i, j] = 0;
                             // gridArray[i - 1, j] = 2;
@@ -151,7 +152,7 @@ public class Testing : MonoBehaviour
                                 if (grid.gridArray[i - 1, j] + grid.gridArray[i, j] == 0)
                                 {
                                     Debug.Log("STVROI EKSPOZIJU");
-                                   // Instantiate(Explosion, new Vector3(1, 1, 1), Quaternion.identity);
+                                    // Instantiate(Explosion, new Vector3(1, 1, 1), Quaternion.identity);
                                     eksplozije[i, j] = Instantiate(Explosion, grid.GetWorldPositionKnight(i - 1, j), Quaternion.identity); ;
                                     eksplo[i, j] = true;
                                 }
@@ -168,10 +169,10 @@ public class Testing : MonoBehaviour
                                 time = 1000;
                             }
                         }
-                        
 
-                        
-                            
+
+
+
                     }
                 }
 
@@ -180,9 +181,9 @@ public class Testing : MonoBehaviour
                     grid.flagMatrix[k, j] = false;
                     grid.rewindMatrix[k, j] = false;
                 }
-            
+
             }
-            if(end == false)
+            if (end == false)
             {
                 grid.TeleportGive();
 
@@ -196,8 +197,35 @@ public class Testing : MonoBehaviour
                 grid.setValue(width - 1, rn, 1);
                 //gridArray[width - 1, rn] = 2;
             }
-            
-
+            /////////////////////////////////////
+            //set mode
+            ////////////////////////////////////
+            for (int j = 0; j < height; j++)
+            {
+                prev = 0;
+                next = 0;
+                for (int i = 0; i < width; i++)
+                {
+                    if (grid.gridArray[i, j] > 0 )
+                    {
+                        if (grid.gridArray[i - 1, j] < 0)
+                        {
+                            Debug.Log("Sudar na" + i + " ," + j);
+                            grid.vitezovi[i, j].GetComponent<red_warrior>().mode = 1;
+                            grid.vitezovi[i-1, j].GetComponent<blue_warrior>().mode = 1;
+                        }
+                        else
+                        {
+                            grid.vitezovi[i, j].GetComponent<red_warrior>().mode = 0;
+                        }
+                            
+                        }
+                   /* else
+                    {
+                        grid.vitezovi[i, j].GetComponent<red_warrior>().mode = 0;
+                    }*/
+                }
+            }
         }
         
     }

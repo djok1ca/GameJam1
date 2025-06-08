@@ -96,7 +96,7 @@ public class Grid : MonoBehaviour
                 }
                 vitezovi[x,y] = Instantiate(Warrior_Blue_, GetWorldPositionKnight(x,y), Quaternion.identity);
             }
-            if(value > 0)
+            if (value > 0)
             {
                 debugTextArray[x, y].text = gridArray[x, y].ToString();
                 if (vitezovi[x, y] != null)
@@ -104,6 +104,7 @@ public class Grid : MonoBehaviour
                     Destroy(vitezovi[x, y]);
                 }
                 vitezovi[x, y] = Instantiate(Warrior_Red_0, GetWorldPositionKnight(x, y), Quaternion.identity);
+                //vitezovi[x, y].GetComponent<red_warrior>().mode=1;
             }
             if(value == 0)
             {

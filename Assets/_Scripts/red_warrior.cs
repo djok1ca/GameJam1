@@ -1,10 +1,11 @@
 using UnityEngine;
 using System.Collections;
 
+
 public class red_warrior : MonoBehaviour
 {
     private Animator animator;
-
+    public int mode = 0;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -12,11 +13,11 @@ public class red_warrior : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
+        if (Input.GetKeyDown(KeyCode.U)|| mode==1)
         {
             animator.Play("red_fight");
         }
-        if (Input.GetKeyDown(KeyCode.Y))
+        if (Input.GetKeyDown(KeyCode.Y)|| mode==0)
         {
             animator.Play("red_run");
         }

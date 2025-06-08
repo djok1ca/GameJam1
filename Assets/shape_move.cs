@@ -21,70 +21,73 @@ public class shape_move : MonoBehaviour
 
     void Update()
     {
-        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouseWorldPos.z = 0;
-
-        // On mouse down: check ONLY this object's collider directly
-        if (Input.GetMouseButtonDown(0))
+        if (con.end ==false)
         {
-            if (GetComponent<Collider2D>().OverlapPoint(mouseWorldPos))
-            {
-                offset = transform.position - mouseWorldPos;
+            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mouseWorldPos.z = 0;
 
-                Debug.Log(offset);
-                dragging = true;
+            // On mouse down: check ONLY this object's collider directly
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (GetComponent<Collider2D>().OverlapPoint(mouseWorldPos))
+                {
+                    offset = transform.position - mouseWorldPos;
+
+                    Debug.Log(offset);
+                    dragging = true;
+                }
             }
-        }
 
-        // Release mouse
-        if (Input.GetMouseButtonUp(0) && dragging)
-        {
-            if (transform.position.x > -1f && transform.position.x < 19.5f && transform.position.y > -2.25f && transform.position.y < 9.75f)
+            // Release mouse
+            if (Input.GetMouseButtonUp(0) && dragging)
             {
-                Destroy(this.gameObject);
-                exists = false;
-                a.spawned = false;
-                int cx = (int)Mathf.Round((transform.position.x - 1.25f) / increment);
-                int cy = (int)Mathf.Round((transform.position.y - 1.25f) / increment);
-                if (this.gameObject.tag == "Shape_L")
+                if (transform.position.x > -1f && transform.position.x < 19.5f && transform.position.y > -2.25f && transform.position.y < 9.75f)
                 {
-                    con.freaze(cx,cy, cx + 1, cy, cx,cy+1, cx, 2 + cy,tip);
+                    Destroy(this.gameObject);
+                    exists = false;
+                    a.spawned = false;
+                    int cx = (int)Mathf.Round((transform.position.x - 1.25f) / increment);
+                    int cy = (int)Mathf.Round((transform.position.y - 1.25f) / increment);
+                    if (this.gameObject.tag == "Shape_L")
+                    {
+                        con.freaze(cx, cy, cx + 1, cy, cx, cy + 1, cx, 2 + cy, tip);
 
-                }
-                else if (this.gameObject.tag == "Shape_sq")
-                {
-                    con.freaze(cx, cy, cx + 1, cy, cx, 1+cy, cx + 1, 1+ cy,tip);
+                    }
+                    else if (this.gameObject.tag == "Shape_sq")
+                    {
+                        con.freaze(cx, cy, cx + 1, cy, cx, 1 + cy, cx + 1, 1 + cy, tip);
 
+                    }
+                    else if (this.gameObject.tag == "Shape_I")
+                    {
+                        con.freaze(cx, cy, cx, 1 + cy, cx, 2 + cy, cx, 3 + cy, tip);
+                    }
+                    else
+                    {
+                        Debug.Log(this.gameObject.tag);
+                    }
                 }
-                else if (this.gameObject.tag == "Shape_I")
+                dragging = false;
+            }
+
+            // Move object if dragging
+            if (dragging)
+            {
+                float closestx;
+                float closesty;
+                transform.position = mouseWorldPos + offset;
+                if (transform.position.x > -1f && transform.position.x < 19.5f && transform.position.y > -2.25f && transform.position.y < 9.75f)
                 {
-                    con.freaze(cx,  cy, cx, 1 + cy, cx, 2 + cy, cx, 3+cy,tip);
+                    closestx = Mathf.Round((transform.position.x - 1.25f) / increment) * increment;
+                    closesty = Mathf.Round((transform.position.y - 1.25f) / increment) * increment;
                 }
                 else
                 {
-                    Debug.Log(this.gameObject.tag);
+                    closestx = transform.position.x;
+                    closesty = transform.position.y;
                 }
+                transform.position = new Vector3(closestx + 1.25f, closesty + 1.25f, transform.position.z);
             }
-            dragging = false;
-        }
-
-        // Move object if dragging
-        if (dragging)
-        {
-            float closestx;
-            float closesty;
-            transform.position = mouseWorldPos + offset;
-            if (transform.position.x > -1f && transform.position.x < 19.5f && transform.position.y > -2.25f && transform.position.y < 9.75f)
-            {
-                closestx = Mathf.Round((transform.position.x - 1.25f) / increment) * increment;
-                closesty = Mathf.Round((transform.position.y - 1.25f) / increment) * increment;
-            }
-            else
-            {
-                closestx = transform.position.x;
-                closesty = transform.position.y;
-            }
-            transform.position = new Vector3(closestx + 1.25f, closesty + 1.25f, transform.position.z);
         }
          
     }
