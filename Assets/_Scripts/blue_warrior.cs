@@ -24,6 +24,10 @@ public class blue_warrior : MonoBehaviour
         {
             animator.Play("idle");
         }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            animator.Play("frozen");
+        }
         if (Input.GetKeyDown(KeyCode.Z))
         {
             StartCoroutine(PlayDeadAndDestroy());

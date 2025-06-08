@@ -25,6 +25,10 @@ public class red_warrior : MonoBehaviour
         {
             animator.Play("red_idle");
         }
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            animator.Play("red_frozen");
+        }
         if (Input.GetKeyDown(KeyCode.R))
         {
             StartCoroutine(PlayDeadAndDestroy());
