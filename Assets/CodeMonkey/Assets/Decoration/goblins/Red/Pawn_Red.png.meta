@@ -692,34 +692,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pawn_Red_23
-      rect:
-        serializedVersion: 2
-        x: 628
-        y: 473
-        width: 7
-        height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: aab05e916ecb9da50800000000000000
-      internalID: 6546471229822667690
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Pawn_Red_24
       rect:
         serializedVersion: 2
-        x: 632
+        x: 622
         y: 447
-        width: 108
+        width: 118
         height: 56
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -736,34 +714,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Pawn_Red_25
-      rect:
-        serializedVersion: 2
-        x: 830
-        y: 461
-        width: 11
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9e5aff70d9c626c40800000000000000
-      internalID: 5504081116300027369
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Pawn_Red_26
       rect:
         serializedVersion: 2
-        x: 841
+        x: 828
         y: 447
-        width: 90
+        width: 103
         height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

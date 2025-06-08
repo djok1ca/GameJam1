@@ -701,8 +701,8 @@ TextureImporter:
         serializedVersion: 2
         x: 1410
         y: 825
-        width: 57
-        height: 71
+        width: 62
+        height: 90
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -713,28 +713,6 @@ TextureImporter:
       bones: []
       spriteID: 4fcad9cf7e619e1d0800000000000000
       internalID: -3321098064577581836
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Archer_Blue_23
-      rect:
-        serializedVersion: 2
-        x: 1439
-        y: 875
-        width: 35
-        height: 40
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 69d9f0c64dff12250800000000000000
-      internalID: 5918292673152654742
       vertices: []
       indices: 
       edges: []
