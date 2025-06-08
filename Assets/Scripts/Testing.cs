@@ -39,7 +39,7 @@ public class Testing : MonoBehaviour
     {
 
         ++time;
-        if (time == 100)
+        if (time == 70)
         {
             shape_spawn.call_spawn();
             time = 0;
@@ -145,10 +145,12 @@ public class Testing : MonoBehaviour
             grid.setValue(0, rn, -1);
             rn = Random.Range(0, height);
             grid.setValue(width-1, rn, 1);
-
+            rn = Random.Range(0, height);
+            grid.setValue(width - 1, rn, 1);
             //gridArray[width - 1, rn] = 2;
 
         }
+        
     }
         public void freaze(int fx1,int fy1, int fx2,int fy2, int fx3,int fy3, int fx4,int fy4,int tip)
         {
