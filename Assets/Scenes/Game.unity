@@ -12697,6 +12697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 8
   height: 4
+  end: 0
   Warrior_Blue_: {fileID: 3149318588877917275, guid: f27c904ac550d67449d87609888db6c8, type: 3}
   Warrior_Red_0: {fileID: 6470761449031376783, guid: 571451cd6a9e9984e8c39758b7efba71, type: 3}
   shape_spawn: {fileID: 1003653272}
@@ -29944,6 +29945,14 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3805807740984988686, guid: 576bfe06cd8309a4c8152307d595b39e, type: 3}
+      propertyPath: a
+      value: 
+      objectReference: {fileID: 1003653272}
+    - target: {fileID: 3805807740984988686, guid: 576bfe06cd8309a4c8152307d595b39e, type: 3}
+      propertyPath: con
+      value: 
+      objectReference: {fileID: 1113183572}
     - target: {fileID: 3842408951141958792, guid: 576bfe06cd8309a4c8152307d595b39e, type: 3}
       propertyPath: m_SortingOrder
       value: 5
