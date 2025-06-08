@@ -159,11 +159,20 @@ public class Grid : MonoBehaviour
 
     public void Freeze(int x, int y)
     {
-       
+
         if (x >= 0 && y >= 0 && x < width && y < height && ended == false)
         {
             flagMatrix[x, y] = true;
+            if (gridArray[x, y] < 0)
+            {
+                vitezovi[x, y].GetComponent<blue_warrior>().mode = 2;
+            }
+            if (gridArray[x, y] > 0)
+            {
+                 vitezovi[x, y].GetComponent<red_warrior>().mode = 2;
+            }
         }
+        
     }
 
     public void Rewind(int x, int y)
@@ -174,19 +183,26 @@ public class Grid : MonoBehaviour
             //vratiti na polje iza
             if (gridArray[x, y] < 0)
             {
-                if(x == 0)
+                if (x == 0)
                 {
                     setValue(x, y, 0);
                 }
                 else
                 {
-                    setValue(x - 1, y, gridArray[x, y] + gridArray[x-1,y]);
+                    setValue(x - 1, y, gridArray[x, y] + gridArray[x - 1, y]);
                     setValue(x, y, 0);
+                }
+                if (x < width)
+                {
+                    if (gridArray[x + 1, y] > 0)
+                    {
+                        vitezovi[x+1, y].GetComponent<red_warrior>().mode = 0;
+                    }
                 }
             }
             if (gridArray[x, y] > 0)//fixati kao za -1 u normalnoj
             {
-                if (x == width-1)
+                if (x == width - 1)
                 {
                     setValue(x, y, 0);
                 }
@@ -194,6 +210,13 @@ public class Grid : MonoBehaviour
                 {
                     setValue(x + 1, y, gridArray[x, y] + gridArray[x + 1, y]);
                     setValue(x, y, 0);
+                }
+                if (x >0)
+                {
+                    if (gridArray[x -1, y] > 0)
+                    {
+                        vitezovi[x-1, y].GetComponent<blue_warrior>().mode = 0;
+                    }
                 }
             }
         }

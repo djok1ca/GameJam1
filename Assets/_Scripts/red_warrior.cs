@@ -25,7 +25,7 @@ public class red_warrior : MonoBehaviour
         {
             animator.Play("red_idle");
         }
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I) || mode==2)
         {
             animator.Play("red_frozen");
         }

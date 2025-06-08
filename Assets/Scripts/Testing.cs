@@ -206,19 +206,23 @@ public class Testing : MonoBehaviour
                 next = 0;
                 for (int i = 0; i < width; i++)
                 {
-                    if (grid.gridArray[i, j] > 0 )
+                    if (grid.gridArray[i, j] > 0)
                     {
-                        if (grid.gridArray[i - 1, j] < 0)
+                        grid.vitezovi[i, j].GetComponent<red_warrior>().mode = 0;
+                    }
+                    if (grid.gridArray[i, j] > 0)
                         {
-                            Debug.Log("Sudar na" + i + " ," + j);
-                            grid.vitezovi[i, j].GetComponent<red_warrior>().mode = 1;
-                            grid.vitezovi[i-1, j].GetComponent<blue_warrior>().mode = 1;
-                        }
-                        else
-                        {
-                            grid.vitezovi[i, j].GetComponent<red_warrior>().mode = 0;
-                        }
-                            
+                            if (grid.gridArray[i - 1, j] < 0)
+                            {
+                                Debug.Log("Sudar na" + i + " ," + j);
+                                grid.vitezovi[i, j].GetComponent<red_warrior>().mode = 1;
+                                grid.vitezovi[i - 1, j].GetComponent<blue_warrior>().mode = 1;
+                            }
+                            else
+                            {
+                                grid.vitezovi[i, j].GetComponent<red_warrior>().mode = 0;
+                            }
+
                         }
                    /* else
                     {
