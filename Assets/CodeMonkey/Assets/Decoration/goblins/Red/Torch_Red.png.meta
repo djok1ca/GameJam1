@@ -401,28 +401,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch_Red_3
-      rect:
-        serializedVersion: 2
-        x: 450
-        y: 904
-        width: 10
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4344e281579af77c0800000000000000
-      internalID: -4071349217737685964
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Torch_Red_4
       rect:
         serializedVersion: 2
@@ -445,57 +423,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch_Red_5
-      rect:
-        serializedVersion: 2
-        x: 630
-        y: 902
-        width: 11
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cf0e00ef71b40bc00800000000000000
-      internalID: 914313290774012156
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Torch_Red_6
-      rect:
-        serializedVersion: 2
-        x: 822
-        y: 897
-        width: 9
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 35743a0ebca724d90800000000000000
-      internalID: -7114989445226215597
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Torch_Red_7
       rect:
         serializedVersion: 2
-        x: 828
+        x: 821
         y: 826
-        width: 67
-        height: 81
+        width: 74
+        height: 89
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -511,35 +445,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Torch_Red_8
-      rect:
-        serializedVersion: 2
-        x: 1014
-        y: 903
-        width: 8
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3582f80f7485c19e0800000000000000
-      internalID: -1649346297522608045
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Torch_Red_9
       rect:
         serializedVersion: 2
-        x: 1018
+        x: 1012
         y: 826
-        width: 69
-        height: 83
+        width: 75
+        height: 90
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
