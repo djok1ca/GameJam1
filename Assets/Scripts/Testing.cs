@@ -112,6 +112,7 @@ public class Testing : MonoBehaviour
                         { 
                             Debug.Log("Pobedio igrac 1");
                             end = true;
+                            grid.ended = true;
                             time = 1000;
                         }
                         ++i;
@@ -163,6 +164,7 @@ public class Testing : MonoBehaviour
                             {
                                 Debug.Log("Pobedio igrac 2");
                                 end = true;
+                                grid.ended = true;
                                 time = 1000;
                             }
                         }

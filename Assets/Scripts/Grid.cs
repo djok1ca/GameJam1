@@ -150,7 +150,7 @@ public class Grid : MonoBehaviour
         int x, y;
         GetXY(worldPosition, out x, out y);
 
-        if (x >= 0 && y >= 0 && x < width && y < height)
+        if (x >= 0 && y >= 0 && x < width && y < height && ended == false)
         {
             flagMatrix[x, y] = true;
         }
@@ -159,7 +159,7 @@ public class Grid : MonoBehaviour
     public void Freeze(int x, int y)
     {
        
-        if (x >= 0 && y >= 0 && x < width && y < height)
+        if (x >= 0 && y >= 0 && x < width && y < height && ended == false)
         {
             flagMatrix[x, y] = true;
         }
@@ -168,7 +168,7 @@ public class Grid : MonoBehaviour
     public void Rewind(int x, int y)
     {
 
-        if (x >= 0 && y >= 0 && x < width && y < height)
+        if (x >= 0 && y >= 0 && x < width && y < height && ended == false)
         {
             //vratiti na polje iza
             if (gridArray[x, y] < 0)
@@ -200,7 +200,7 @@ public class Grid : MonoBehaviour
 
     public void TeleportTake(int x, int y)
     {
-        if (x >= 0 && y >= 0 && x < width && y < height)
+        if (x >= 0 && y >= 0 && x < width && y < height && ended == false)
         {
             teleportMatrix[x, y] = gridArray[x, y];
             gridArray[x, y] = 0;
