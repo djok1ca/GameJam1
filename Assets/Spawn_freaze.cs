@@ -34,6 +34,14 @@ public class Spawn_freaze : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*if (!spawned)
+        {
+            spawn();
+            spawned = true;
+        }*/
+    }
+    public void call_spawn()
+    {
         if (!spawned)
         {
             spawn();
@@ -44,7 +52,7 @@ public class Spawn_freaze : MonoBehaviour
     {
         int val = Random.Range(0, 9);
 
-        Vector3 offset = new Vector3(-5, -1, 0);
+        Vector3 offset = new Vector3(-7, -3, 0);
         GameObject shape = Instantiate(list[val]); //TODO add plase that it spawns
         shape.transform.position = offset;
         shape_move s = shape.GetComponent<shape_move>();

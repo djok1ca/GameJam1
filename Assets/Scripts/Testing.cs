@@ -14,7 +14,7 @@ public class Testing : MonoBehaviour
 
     public GameObject Warrior_Blue_;
     public GameObject Warrior_Red_0;
-
+    public Spawn_freaze shape_spawn;
     private void Start()
     {
         grid = new Grid(width, height, 2.5f,  Warrior_Blue_, Warrior_Red_0);
@@ -41,7 +41,7 @@ public class Testing : MonoBehaviour
         ++time;
         if (time == 100)
         {
-            
+            shape_spawn.call_spawn();
             time = 0;
             //pomeranje
             for (int j = 0; j < height; j++)
