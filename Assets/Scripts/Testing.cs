@@ -19,10 +19,12 @@ public class Testing : MonoBehaviour
     public Spawn_freaze shape_spawn;
     public GameObject Explosion;
     public GameObject[,] eksplozije;
+    public bool[,] eksplo;
     private void Start()
     {
         grid = new Grid(width, height, 2.5f, Warrior_Blue_, Warrior_Red_0, Explosion);
-        eksplozije = new GameObject[width, height];
+        eksplozije = new GameObject[width+5, height+5];
+        eksplo = new bool[width+5, height+5];
         // gridArray = new int[width, height];
     }
 
@@ -42,7 +44,21 @@ public class Testing : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if (time == 35)
+        {
+            for (int j = 0; j < height; j++)
+            {
 
+                for (int i = 0; i < width; i++)
+                {
+                    if (eksplo[i, j])
+                    {
+                        eksplo[i, j] = false;
+                        Destroy(eksplozije[i, j]);
+                    }
+                }
+            }
+        }
         ++time;
         if (time == 70)
         {
@@ -55,20 +71,20 @@ public class Testing : MonoBehaviour
                 next = 0;
                 for (int i = 0; i < width; i++)
                 {
-                    if (grid.gridArray[i, j] < 0 && grid.flagMatrix[i, j] == false)
+                    if (grid.gridArray[i, j] < 0 && grid.flagMatrix[i, j] == false)//ako je dobar vitez
                     {
 
                         prev = next;
                         next = 0;
-                        if (grid.gridArray[i + 1, j] >= 0)//moze bez granjanja //ako je 
+                        if (grid.gridArray[i + 1, j] >= 0)//moze bez granjanja //ako je i ako je sledecin los vitez
                         {
-                            if (grid.flagMatrix[i + 1, j] == true)
+                            if (grid.flagMatrix[i + 1, j] == true)//ako je zaledjen
                             {
                                 grid.setValue(i + 1, j, grid.gridArray[i, j]);
                                 grid.setValue(i, j, prev);
                                 prev = 0;
                             }
-                            else
+                            else //ako nije zaledjen
                             {
                                 grid.setValue(i + 1, j, grid.gridArray[i + 1, j] + grid.gridArray[i, j]);
                                 grid.setValue(i, j, prev);
@@ -76,7 +92,7 @@ public class Testing : MonoBehaviour
                             }
                             
                         }
-                        else
+                        else //ako sledeci
                         {
                             if (grid.flagMatrix[i + 1, j])
                             {
@@ -118,7 +134,7 @@ public class Testing : MonoBehaviour
                         next = 0;
                         grid.setValue(i, j,grid.gridArray[i, j] + prev);
                         prev = 0;
-                        if(grid.gridArray[i, j] > 0)
+                        if(grid.gridArray[i, j] > 0)//los vitez potez
                         {
                             // gridArray[i, j] = 0;
                             // gridArray[i - 1, j] = 2;
@@ -131,6 +147,13 @@ public class Testing : MonoBehaviour
 
                             else
                             {
+                                if (grid.gridArray[i - 1, j] + grid.gridArray[i, j] == 0)
+                                {
+                                    Debug.Log("STVROI EKSPOZIJU");
+                                   // Instantiate(Explosion, new Vector3(1, 1, 1), Quaternion.identity);
+                                    eksplozije[i, j] = Instantiate(Explosion, grid.GetWorldPositionKnight(i - 1, j), Quaternion.identity); ;
+                                    eksplo[i, j] = true;
+                                }
                                 grid.setValue(i - 1, j, grid.gridArray[i - 1, j] + grid.gridArray[i, j]);
                                 grid.setValue(i, j, 0);
                             }
@@ -241,7 +264,7 @@ public class Testing : MonoBehaviour
 
 */
         #endregion
-        Debug.Log("freze squre are :"+fx1+","+fy1 +" " + fx2+","+fy2+" " + fx3+","+fy3+" " + fx4+","+fy4);
+       /* Debug.Log("freze squre are :"+fx1+","+fy1 +" " + fx2+","+fy2+" " + fx3+","+fy3+" " + fx4+","+fy4);
 
         for (int i = 0; i < height; i++)
         {
@@ -250,7 +273,7 @@ public class Testing : MonoBehaviour
                 Debug.Log(i + " " + j);
                 Debug.Log(grid.flagMatrix[j, i].ToString());
             }
-        }
+        }*/
 
     }
 

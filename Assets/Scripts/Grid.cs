@@ -76,7 +76,7 @@ public class Grid : MonoBehaviour
         return new Vector3(x,y) * cellSize; 
     }
 
-    private Vector3 GetWorldPositionKnight(int x, int y)
+    public Vector3 GetWorldPositionKnight(int x, int y)
     {
         return new Vector3(x+0.5f, y+0.8f) * cellSize;
     }
