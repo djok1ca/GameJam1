@@ -91,7 +91,10 @@ public class Testing : MonoBehaviour
                          
                         }
                         if ((i + 1) == width - 1)
-                        { Debug.Log("Pobedio igrac 1"); }
+                        { 
+                            Debug.Log("Pobedio igrac 1");
+                            time = 1000;
+                        }
                         ++i;
 
                     }
@@ -125,7 +128,10 @@ public class Testing : MonoBehaviour
                             
 
                         if ((i - 1) == 0)
-                        { Debug.Log("Pobedio igrac 2"); }
+                        { 
+                            Debug.Log("Pobedio igrac 2");
+                            time = 1000;
+                        }
 
                         
                             
