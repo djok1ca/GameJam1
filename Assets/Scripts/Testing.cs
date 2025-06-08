@@ -16,9 +16,11 @@ public class Testing : MonoBehaviour
     public GameObject Warrior_Red_0;
     public Spawn_freaze shape_spawn;
     public GameObject Explosion;
+    public GameObject[,] eksplozije;
     private void Start()
     {
-        grid = new Grid(width, height, 2.5f, Warrior_Blue_, Warrior_Red_0,Explosion);
+        grid = new Grid(width, height, 2.5f, Warrior_Blue_, Warrior_Red_0, Explosion);
+        eksplozije = new GameObject[width, height];
         // gridArray = new int[width, height];
     }
 
@@ -56,7 +58,7 @@ public class Testing : MonoBehaviour
 
                         prev = next;
                         next = 0;
-                        if (grid.gridArray[i + 1, j] >= 0)//moze bez granjanja
+                        if (grid.gridArray[i + 1, j] >= 0)//moze bez granjanja //ako je 
                         {
                             if (grid.flagMatrix[i + 1, j] == true)
                             {
@@ -89,7 +91,10 @@ public class Testing : MonoBehaviour
                          
                         }
                         if ((i + 1) == width - 1)
-                        { Debug.Log("Pobedio igrac 1"); }
+                        { 
+                            Debug.Log("Pobedio igrac 1");
+                            time = 1000;
+                        }
                         ++i;
 
                     }
@@ -123,7 +128,10 @@ public class Testing : MonoBehaviour
                             
 
                         if ((i - 1) == 0)
-                        { Debug.Log("Pobedio igrac 2"); }
+                        { 
+                            Debug.Log("Pobedio igrac 2");
+                            time = 1000;
+                        }
 
                         
                             
