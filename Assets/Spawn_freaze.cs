@@ -52,8 +52,27 @@ public class Spawn_freaze : MonoBehaviour
     {
         int val = Random.Range(0, 9);
 
-        Vector3 offset = new Vector3(-7, -3, 0);
+        Vector3 offset;// = new Vector3(-7, -3, 0);
         GameObject shape = Instantiate(list[val]); //TODO add plase that it spawns
+            if (shape.tag == "Shape_L")
+                {
+                      offset=new Vector3(-6.7f, -1.8f, 0);
+
+                }
+                else if (shape.tag == "Shape_sq")
+                {
+                     offset=new Vector3(-7f, -0.2f, 0);
+
+                }
+                else if (shape.tag == "Shape_I")
+                {
+                    offset=new Vector3(-6, -2.8f, 0);
+                }
+                else
+                {
+                     offset=new Vector3(-7, -3, 0);
+                    Debug.Log(this.gameObject.tag);
+                }
         shape.transform.position = offset;
         shape_move s = shape.GetComponent<shape_move>();
         s.con = cone;
