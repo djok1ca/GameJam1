@@ -13,12 +13,13 @@ public class Spawn_freaze : MonoBehaviour
     public GameObject obj7;
     public GameObject obj8;
     public GameObject obj9;
+    public GameObject obj10;
     public Testing cone;
     GameObject[] list;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        list = new GameObject[9];
+        list = new GameObject[10];
         list[0] = obj1;
         list[1] = obj2;
         list[2] = obj3;
@@ -28,6 +29,7 @@ public class Spawn_freaze : MonoBehaviour
         list[6] = obj7;
         list[7] = obj8;
         list[8] = obj9;
+        list[9] = obj10;
         //spawn();
     }
 
@@ -50,29 +52,33 @@ public class Spawn_freaze : MonoBehaviour
     }
     void spawn()
     {
-        int val = Random.Range(0, 9);
-
+        int val = Random.Range(0, 10);
+        val = 9;
         Vector3 offset;// = new Vector3(-7, -3, 0);
         GameObject shape = Instantiate(list[val]); //TODO add plase that it spawns
-            if (shape.tag == "Shape_L")
-                {
-                      offset=new Vector3(-6.7f, -1.8f, 0);
+        if (shape.tag == "Shape_L")
+        {
+            offset = new Vector3(-6.7f, -1.8f, 0);
 
-                }
-                else if (shape.tag == "Shape_sq")
-                {
-                     offset=new Vector3(-7f, -0.2f, 0);
+        }
+        else if (shape.tag == "Shape_sq")
+        {
+            offset = new Vector3(-7f, -0.2f, 0);
 
-                }
-                else if (shape.tag == "Shape_I")
-                {
-                    offset=new Vector3(-6, -2.8f, 0);
-                }
-                else
-                {
-                     offset=new Vector3(-7, -3, 0);
-                    Debug.Log(this.gameObject.tag);
-                }
+        }
+        else if (shape.tag == "Shape_I")
+        {
+            offset = new Vector3(-6, -2.8f, 0);
+        }
+        else if (shape.tag == "Shape_donat")
+        {
+            offset = new Vector3(-5.7f, -1.5f, 0);
+        }
+        else
+        {
+            offset = new Vector3(-7, -3, 0);
+            Debug.Log(this.gameObject.tag);
+        }
         shape.transform.position = offset;
         shape_move s = shape.GetComponent<shape_move>();
         s.con = cone;

@@ -62,6 +62,10 @@ public class shape_move : MonoBehaviour
                     {
                         con.freaze(cx, cy, cx, 1 + cy, cx, 2 + cy, cx, 3 + cy, tip);
                     }
+                    else if (this.gameObject.tag == "Shape_donat")
+                    {
+                        con.freaze(cx, cy, cx+1, 1 + cy, cx-1, 1 + cy, cx, 2 + cy, tip);
+                    }
                     else
                     {
                         Debug.Log(this.gameObject.tag);
