@@ -8,6 +8,7 @@ TagManager:
   - Shape_L
   - Shape_spawner
   - Shape_I
+  - Shape_donat
   layers:
   - Default
   - TransparentFX
