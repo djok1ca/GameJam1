@@ -245,11 +245,20 @@ public class Testing : MonoBehaviour
         }
         if(tip == 2)
         {
+            grid.rewindMatrix[fx1, fy1] = true;
+            grid.rewindMatrix[fx2, fy2] = true;
+            grid.rewindMatrix[fx3, fy3] = true;
+            grid.rewindMatrix[fx4, fy4] = true;
 
             grid.Rewind(fx1, fy1);
             grid.Rewind(fx2, fy2);
             grid.Rewind(fx3, fy3);
             grid.Rewind(fx4, fy4);
+
+            grid.rewindMatrix[fx1, fy1] = false;
+            grid.rewindMatrix[fx2, fy2] = false;
+            grid.rewindMatrix[fx3, fy3] = false;
+            grid.rewindMatrix[fx4, fy4] = false;
         }
         if (tip == 3)
         {
