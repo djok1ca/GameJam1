@@ -12,10 +12,12 @@ public class Testing : MonoBehaviour
     private int prev = 0;
     private int next = 0;
 
+    public GameObject Warrior_Blue_;
+    public GameObject Warrior_Red_0;
 
     private void Start()
     {
-        grid = new Grid(width, height, 2.5f);
+        grid = new Grid(width, height, 2.5f,  Warrior_Blue_, Warrior_Red_0);
         // gridArray = new int[width, height];
     }
 

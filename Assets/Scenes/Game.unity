@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap_Flat_0 (61)
       objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3489046
@@ -199,6 +203,10 @@ PrefabInstance:
     - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_Name
       value: Tilemap_Flat_0 (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
@@ -413,6 +421,10 @@ PrefabInstance:
     - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_Name
       value: Tilemap_Flat_0 (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
@@ -720,6 +732,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap_Flat_0 (55)
       objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3489046
@@ -788,6 +804,10 @@ PrefabInstance:
     - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_Name
       value: Tilemap_Flat_0 (64)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
@@ -889,6 +909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap_Flat_0 (68)
       objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3489046
@@ -962,6 +986,10 @@ PrefabInstance:
     - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_Name
       value: Tilemap_Flat_0 (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
@@ -1387,6 +1415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap_Flat_0 (81)
       objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3489046
@@ -1555,6 +1587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap_Flat_0 (75)
       objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3489046
@@ -1673,6 +1709,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2928d734ef1b85418da05fc1c9aa2a0, type: 3}
+--- !u!1 &726195811 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5638654680034534417, guid: 52f0b363dff264842921523ffabe84d7, type: 3}
+  m_PrefabInstance: {fileID: 229032961702402694}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &738116571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1684,6 +1725,10 @@ PrefabInstance:
     - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_Name
       value: Tilemap_Flat_0 (78)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
@@ -1753,6 +1798,10 @@ PrefabInstance:
     - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_Name
       value: Tilemap_Flat_0 (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
@@ -1871,6 +1920,10 @@ PrefabInstance:
     - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_Name
       value: Tilemap_Flat_0 (71)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
@@ -2074,6 +2127,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap_Flat_0 (62)
       objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3489046
@@ -2208,6 +2265,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap_Flat_0 (72)
       objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3489046
@@ -2311,6 +2372,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 8
   height: 4
+  Warrior_Blue_: {fileID: 3149318588877917275, guid: f27c904ac550d67449d87609888db6c8, type: 3}
+  Warrior_Red_0: {fileID: 6470761449031376783, guid: 571451cd6a9e9984e8c39758b7efba71, type: 3}
 --- !u!4 &1128120670 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
@@ -2320,6 +2383,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3516641642110194260, guid: 2d65aaa792b35de459eaaafa6159856f, type: 3}
   m_PrefabInstance: {fileID: 1637597545}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1150360107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9172267549789878971, guid: 06a4251afe577b34c97a6d501fd27d23, type: 3}
+  m_PrefabInstance: {fileID: 1239418245975352040}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1182405517
 PrefabInstance:
@@ -7252,6 +7320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap_Flat_0 (56)
       objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3489046
@@ -7320,6 +7392,10 @@ PrefabInstance:
     - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_Name
       value: Tilemap_Flat_0 (77)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
@@ -7451,6 +7527,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap_Flat_0 (79)
       objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3489046
@@ -7519,6 +7599,10 @@ PrefabInstance:
     - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_Name
       value: Tilemap_Flat_0 (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
@@ -7599,6 +7683,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap_Flat_0 (80)
       objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3489046
@@ -7678,6 +7766,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap_Flat_0 (76)
       objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3489046
@@ -7746,6 +7838,10 @@ PrefabInstance:
     - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_Name
       value: Tilemap_Flat_0 (82)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
@@ -7892,6 +7988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap_Flat_0 (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3489046
@@ -7960,6 +8060,10 @@ PrefabInstance:
     - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_Name
       value: Tilemap_Flat_0 (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
@@ -8030,6 +8134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap_Flat_0 (57)
       objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3489046
@@ -8098,6 +8206,10 @@ PrefabInstance:
     - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_Name
       value: Tilemap_Flat_0 (73)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
@@ -8391,6 +8503,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap_Flat_0 (51)
       objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3489046
@@ -8574,6 +8690,10 @@ PrefabInstance:
     - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_Name
       value: Tilemap_Flat_0 (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
@@ -8789,6 +8909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap_Flat_0 (53)
       objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3489046
@@ -8862,6 +8986,10 @@ PrefabInstance:
     - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_Name
       value: Tilemap_Flat_0 (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
@@ -8942,6 +9070,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tilemap_Flat_0 (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3489046
@@ -9010,6 +9142,10 @@ PrefabInstance:
     - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_Name
       value: Tilemap_Flat_0 (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
@@ -9084,6 +9220,10 @@ PrefabInstance:
     - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_Name
       value: Tilemap_Flat_0 (74)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325634130105004877, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8165829024646998993, guid: e268ddd5023430140ba6d6840a344f00, type: 3}
       propertyPath: m_LocalScale.x
@@ -9732,6 +9872,14 @@ PrefabInstance:
       propertyPath: obj7
       value: 
       objectReference: {fileID: 8748020034669883967, guid: 576bfe06cd8309a4c8152307d595b39e, type: 3}
+    - target: {fileID: 5199570896589920284, guid: 635141e9310a2954d9d60c458fe2ab20, type: 3}
+      propertyPath: obj8
+      value: 
+      objectReference: {fileID: 1150360107}
+    - target: {fileID: 5199570896589920284, guid: 635141e9310a2954d9d60c458fe2ab20, type: 3}
+      propertyPath: obj9
+      value: 
+      objectReference: {fileID: 726195811}
     - target: {fileID: 8313225483802460944, guid: 635141e9310a2954d9d60c458fe2ab20, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50
