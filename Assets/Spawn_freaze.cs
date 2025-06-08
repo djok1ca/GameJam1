@@ -14,12 +14,14 @@ public class Spawn_freaze : MonoBehaviour
     public GameObject obj8;
     public GameObject obj9;
     public GameObject obj10;
+    public GameObject obj11;
+    public GameObject obj12;
     public Testing cone;
     GameObject[] list;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        list = new GameObject[10];
+        list = new GameObject[13];
         list[0] = obj1;
         list[1] = obj2;
         list[2] = obj3;
@@ -30,6 +32,8 @@ public class Spawn_freaze : MonoBehaviour
         list[7] = obj8;
         list[8] = obj9;
         list[9] = obj10;
+        list[10] = obj11;
+        list[11] = obj12;
         //spawn();
     }
 
@@ -52,8 +56,8 @@ public class Spawn_freaze : MonoBehaviour
     }
     void spawn()
     {
-        int val = Random.Range(0, 10);
-        val = 9;
+        int val = Random.Range(0, 12);
+    
         Vector3 offset;// = new Vector3(-7, -3, 0);
         GameObject shape = Instantiate(list[val]); //TODO add plase that it spawns
         if (shape.tag == "Shape_L")
