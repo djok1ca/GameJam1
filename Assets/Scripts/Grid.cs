@@ -213,7 +213,7 @@ public class Grid : MonoBehaviour
                 }
                 if (x >0)
                 {
-                    if (gridArray[x -1, y] > 0)
+                    if (gridArray[x -1, y] < 0)
                     {
                         vitezovi[x-1, y].GetComponent<blue_warrior>().mode = 0;
                     }
@@ -226,10 +226,39 @@ public class Grid : MonoBehaviour
     {
         if (x >= 0 && y >= 0 && x < width && y < height && ended == false)
         {
+
+              if (gridArray[x, y] > 0)//fixati kao za -1 u normalnoj
+            {
+                if (x > 0)
+                {
+                    if (gridArray[x - 1, y] < 0)
+                    {
+                        vitezovi[x - 1, y].GetComponent<blue_warrior>().mode = 0;
+                    }
+                }
+            }
+
+            if (gridArray[x, y] < 0)
+            {
+                if (x < width)
+                {
+                    if (gridArray[x + 1, y] > 0)
+                    {
+                        vitezovi[x+1, y].GetComponent<red_warrior>().mode = 0;
+                    }
+                }
+            }
+            
             teleportMatrix[x, y] = gridArray[x, y];
             gridArray[x, y] = 0;
             setValue(x, y, 0);
             teleportMatrixCountDown[x, y]++;
+
+
+          
+            
+
+
         }
     }
 
